@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<!--
+University of Central Florida
+Department of Electric Engineering & Computer Science
+Fall 2012
+
+CAP 5725 - Computer Graphics I
+Prof.: Sumanta Pattanaik.
+
+Assignment 6
+
+Student: Edward Aymerich.
+PID: 3167485
+
+Copyright 2012 UCF.
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Assignment 6 - Edward Aymerich</title>
+	<script type="text/javascript" src="webgl-debug.js"></script>
+	<script type="text/javascript" src="gl-matrix.js"></script>
+	<script type="text/javascript" src="metalRefractiveIndex.js"></script>
+	<script type="text/javascript" src="code.js"></script>
+</head>
+
+<body onload="main();">
+
+	<h2>Assignment 6</h2>
+	<h4>Student: Edward Aymerich. PID: 3167485</h4>
+	
+	<p>Select a model to render.</p>
+
+	<select id="modelSelected" onchange="loadModel();">
+		<option value="DijonPalais.json">DijonPalais.json</option>
+		<option value="House.json">House.json</option>
+		<option value="House_of_parliament.json">House_of_parliament.json</option>
+		<option value="skeleton.json">skeleton.json</option>
+		<option value="skull.json">skull.json</option>
+		<option value="StBasil.json">StBasil.json</option>
+		<option value="StPeter.json">StPeter.json</option>
+		<option value="Teapot.json" selected>Teapot.json</option>
+	</select>
+	
+	<div>
+		<canvas id="myCanvas" width="256" height="256" style="border:5px solid lightgray; background-color: white;"></canvas>
+	</div>
+	
+	<input id="rotateButton" type="button" onclick="toggleRotation();" value="Rotate light source" />
+	<input id="rotateCamButton" type="button" onclick="toggleCameraRotation();" value="Rotate Camera" />
+	
+	<div>
+		Shading: <input id="shadText" type="text" disabled="disabled" value="Cook-Torrance Shading" />
+		<input id="lightButton" type="button" onclick="toggleShaders();" value="Change" />
+	</div>
+	
+	<div>
+		Type of light: <input id="lt" type="text" disabled="disabled" value="directional" />
+		<input id="lightButton" type="button" onclick="toggleLightType();" value="Change" />
+	</div>
+	<div>
+		Cook-Torrance parameters: <br />
+		metal=<select id="metalSelect" onchange="setMetal();"> </select> <br />
+		shininess=<input id="shininess" type="text" /> 
+		<input id="shininessButton" type="button" onclick="setShininess();" value="Set" /><br />
+	</div>
+	<div>
+		Oren-Nayar parameters: <br />
+		standard deviation=<input id="sigma" type="text" /> 
+		<input id="sigmaButton" type="button" onclick="setSigma();" value="Set" /><br />
+	</div>
+	<div>
+		light_src.x=<input id="lsx" type="text" disabled="disabled" /> <br />
+		light_src.y=<input id="lsy" type="text" disabled="disabled" /> <br />
+		light_src.z=<input id="lsz" type="text" disabled="disabled" /> <br />
+		light_src.w=<input id="lsw" type="text" disabled="disabled" /> <br />
+	</div>
+	<p><i>Note: this page is compatible only with Google Chrome.</i></p>
+	<p>Chrome must be run with argument <i>--allow-file-access-from-files</i> for models to load.</p>
+
+</body>
+
+</html>
+ 

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+University of Central Florida
+Department of Electric Engineering & Computer Science
+Fall 2012
+
+CAP 5725 - Computer Graphics I
+Prof.: Sumanta Pattanaik.
+
+Assignment 1
+Part 2
+
+Student: Edward Aymerich.
+PID: 3167485
+
+Copyright 2012 UCF.
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Assignment 1 - Part 2</title>
+	<script src="part2.js"></script>
+</head>
+
+<body onload="main()">
+
+<p>Just drag the sliders!</p>
+
+
+
+<table style="border: 0px;">
+<tr>
+	<td>Red:</td><td><input id="ired" type="range" name="points" min="0" max="255" onchange="update()" /></td>
+</tr>
+<tr>
+	<td>Green:</td><td><input id="igreen" type="range" name="points" min="0" max="255" onchange="update()" /></td>
+</tr>
+<tr>
+	<td>Blue:</td><td><input id="iblue" type="range" name="points" min="0" max="255" onchange="update()" /></td>
+</tr>
+</table>
+
+<!-- These buttons are no longer necessary, as both methods (main and update) are called automatically.
+<button type="botton" onclick="main()"> Main </button> <br />
+<button type="botton" onclick="update()"> Testo </button> <br />
+-->
+
+<canvas id="myCanvas" width="256" height="256" style="border:5px solid lightgray; background-color: white;"></canvas>
+
+<p><i>Note: this page is only compatible with Google Chrome.</i></p>
+
+</body>
+
+</html>
+ 

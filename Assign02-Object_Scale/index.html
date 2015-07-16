@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<!--
+University of Central Florida
+Department of Electric Engineering & Computer Science
+Fall 2012
+
+CAP 5725 - Computer Graphics I
+Prof.: Sumanta Pattanaik.
+
+Assignment 2
+
+Student: Edward Aymerich.
+PID: 3167485
+
+Copyright 2012 UCF.
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Assignment 2 - Edward Aymerich</title>
+	<script src="code.js"></script>
+</head>
+
+<body onload="main();" onkeypress="keys(event);">
+
+	<h2>Assignment 2</h2>
+	<h4>Student: Edward Aymerich. PID: 3167485</h4>
+
+	<p>Press '+' to scale up, or '-' to scale down.</p>
+	
+	<p>Initial scale is calculated from object bound.</p>
+
+	<div>Actual scale:<input id="tbScale" type="text" disabled="disabled" /> </div>
+
+	<div><input id="reset" type="button" value="Reset Scale" onclick="resetScale();"/> </div>
+
+	<canvas id="myCanvas" width="256" height="256" style="border:5px solid lightgray; background-color: white;"></canvas>
+
+	<p><i>Note: this page is compatible only with Google Chrome.</i></p>
+
+</body>
+
+</html>
+ 

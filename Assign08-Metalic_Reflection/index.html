@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!--
+University of Central Florida
+Department of Electric Engineering & Computer Science
+Fall 2012
+
+CAP 5725 - Computer Graphics I
+Prof.: Sumanta Pattanaik.
+
+Assignment 8
+
+Student: Edward Aymerich.
+PID: 3167485
+
+Copyright 2012 UCF.
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Assignment 8 - Edward Aymerich</title>
+	<script type="text/javascript" src="webgl-debug.js"></script>
+	<script type="text/javascript" src="gl-matrix.js"></script>
+	<script type="text/javascript" src="metalRefractiveIndex.js"></script>
+	<script type="text/javascript" src="code.js"></script>
+</head>
+
+<body onload="main();">
+
+	<h2>Assignment 8</h2>
+	<h4>Student: Edward Aymerich. PID: 3167485</h4>
+	
+	<div>
+		<div style="float:left;">
+			<canvas id="myCanvas" width="256" height="256" style="border:5px solid lightgray; background-color: white;"></canvas>
+		</div>
+		<div style="float:left; border: solid black 1px; padding: 3px;">
+			Parameters: <br />
+			Shader=<select id="shaderSelect" onchange="setShader();"> </select> <br />
+			metal=<select id="metalSelect" onchange="setMetal();"> </select> <br />
+			Select RGB Colour Space:<select id="colorSpaceSelect" onchange="changeColorSpace();"> </select> <br />
+			<input id="rotateCamButton" type="button" onclick="toggleCameraRotation();" value="Rotate Camera" />
+		</div>
+	</div>
+	<div style="clear:both;"> </div>
+	
+	
+	
+	<p><i>Note: this page is compatible only with Google Chrome.</i></p>
+	<p>Chrome must be run with argument <i>--allow-file-access-from-files</i> for models to load.</p>
+
+</body>
+
+</html>
+ 

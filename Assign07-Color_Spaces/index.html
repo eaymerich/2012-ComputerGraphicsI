@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<!--
+University of Central Florida
+Department of Electric Engineering & Computer Science
+Fall 2012
+
+CAP 5725 - Computer Graphics I
+Prof.: Sumanta Pattanaik.
+
+Assignment 7
+
+Student: Edward Aymerich.
+PID: 3167485
+
+Copyright 2012 UCF.
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Assignment 7 - Edward Aymerich</title>
+	<script type="text/javascript" src="code.js"></script>
+</head>
+
+<body onload="main();">
+
+	<h2>Assignment 7</h2>
+	<h4>Student: Edward Aymerich. PID: 3167485</h4>
+	
+	
+	<div>
+		
+	</div>
+	
+	<div>
+		Select RGB Colour Space:<select id="colorSelect" onchange="changeColor();"> </select><br />
+		<input type="checkbox" name="checkgroup" checked onchange="changeConstrainRGB();" /> Constrain RGB. <br />
+		<input type="checkbox" name="checkgroup" checked onchange="changeGammaCorrection();" /> Apply gamma correction.
+	</div>
+	
+	<div style="border:black 1px dotted; float:left;">
+		<div>
+		Spectrum:<br/>
+		<canvas id="spectrumCanvas" width="128" height="128" style="border:5px solid lightgray; background-color: white;"></canvas>
+		</div>
+		<div>
+		Select spectrum:
+		<select id="spectrumSelect" onchange="changeSpectrum();"> </select>
+		</div>
+	</div>
+	
+	<div style="border:black 1px dotted; float:left;">
+		<div style="">
+		RGB (Full light):<br/>
+		<canvas id="rgbCanvas" width="128" height="128" style="border:5px solid lightgray; background-color: white;"></canvas>
+		</div>
+		<div style="padding-left:10px;">
+		x=<input id="rgbXText" type="text" disabled="disabled" /> <br />
+		y=<input id="rgbYText" type="text" disabled="disabled" /> <br />
+		z=<input id="rgbZText" type="text" disabled="disabled" /> <br />
+		
+		r=<input id="rgbRText" type="text" disabled="disabled" /> <br />
+		g=<input id="rgbGText" type="text" disabled="disabled" /> <br />
+		b=<input id="rgbBText" type="text" disabled="disabled" /> <br />
+		</div>
+	</div>
+	
+	<div style="border:black 1px dotted;float:left;">
+		<div>
+		Temperature:<br/>
+		<canvas id="tempCanvas" width="128" height="128" style="border:5px solid lightgray; background-color: white;"></canvas> <br />
+		</div>
+		<div>
+			<select id="tempSelect" onchange="changeTemp();"> </select> <br />
+			<input id="tempText" type="text" disabled="disabled" />°K
+		</div>
+		<div>
+		x =<input id="tempXText" type="text" disabled="disabled" /> <br />
+		y =<input id="tempYText" type="text" disabled="disabled" /> <br />
+		z =<input id="tempZText" type="text" disabled="disabled" /> <br />
+		r =<input id="tempRText" type="text" disabled="disabled" /> <br />
+		g =<input id="tempGText" type="text" disabled="disabled" /> <br />
+		b =<input id="tempBText" type="text" disabled="disabled" /> <br />
+		</div>
+	</div>
+	
+	<div style="border:black 1px dotted; float:left;">
+		<div style="">
+		Final Color:<br/>
+		<canvas id="fcolorCanvas" width="128" height="128" style="border:5px solid lightgray; background-color: white;"></canvas>
+		</div>
+		<div style="padding-left:10px;">
+		x =<input id="fcolorXText" type="text" disabled="disabled" /> <br />
+		y =<input id="fcolorYText" type="text" disabled="disabled" /> <br />
+		z =<input id="fcolorZText" type="text" disabled="disabled" /> <br />
+		
+		r =<input id="fcolorRText" type="text" disabled="disabled" /> <br />
+		g =<input id="fcolorGText" type="text" disabled="disabled" /> <br />
+		b =<input id="fcolorBText" type="text" disabled="disabled" /> <br />
+		</div>
+	</div>
+	
+	
+	
+	<div style="clear:both;">
+	<p><i>Note: this page is compatible only with Google Chrome.</i></p>
+	<img src="Figure_4-MCC.png" alt="MacBeth ColorChecker" />
+	</div>
+
+</body>
+
+</html>
+ 
